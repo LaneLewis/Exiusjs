@@ -15,7 +15,6 @@ async function Upload_File(buffer, folderId,fileName){
 		console.log(e)
 		throw Error("File Failed to Upload")
 	}
-
 }
 async function Update_File(buffer, fileId){
 	// Update_File takes in a buffer and a fileId, it then updates the

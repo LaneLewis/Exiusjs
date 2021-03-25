@@ -7,10 +7,7 @@ async function Authenticate(req,res,cb){
         try{
             let templateKey=authorization.split(";")[0].split(":")[1]
             let writeKey=authorization.split(";")[1].split(":")[1]
-            console.log("above write key")
             let writeKeyData=await Get_Write_Key(templateKey,writeKey)
-            //console.log(writeKeyData.uploadState)
-            //Get_Write_Key()
             if (! writeKeyData){
                 Terminate_Connection(res)
             }

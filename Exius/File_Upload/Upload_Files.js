@@ -11,23 +11,12 @@ router.post("/",[Authenticate,Verify_Uploaded_Files,Filter_By_Size],async functi
     let fileInformation=request.app.locals.fileInformation
     let writeKeyData=request.app.locals.writeKeyData
     let failedFiles=request.app.locals.failedFiles
-    //console.log(request.files)
     for (const [key,value] of Object.entries(verifiedFiles)){
         newFile=await Promise.all(value.map(File_To_Box,{fileInformation:fileInformation,failedFiles:failedFiles,writeKeyData:writeKeyData}))
-        //console.log(newFile)
     }
-    //console.log(failedFiles)
     writeKeyData["uploadState"]=fileInformation
     try{
-        console.log(request.app.locals.keys.templateKey)
-        let writeKeyUpdated= Update_Write_Key(`${request.app.locals.keys.templateKey}`,writeKeyData)
-        console.log(writeKeyUpdated)
-        //writeKeyUpdated=await Update_Write_Key(writeKeyData)
-    
-
-    //writeKeyUpdated=await Modify_Write_Key(writeKeyData)
-    //console.log(writeKeyUpdated)
-    console.log(failedFiles)
+    Update_Write_Key(`${request.app.locals.keys.templateKey}`,writeKeyData)
     response.setHeader('Access-Control-Allow-Origin', "*");
     response.setHeader('Content-Type', 'application/json');
     response.json({"failedFiles":failedFiles})
@@ -58,4 +47,3 @@ async function File_To_Box(file){
 module.exports = {File_Upload:router}
 
 
-//app.listen(port, () => console.log(`Upload Files listening on port ${port}!`));

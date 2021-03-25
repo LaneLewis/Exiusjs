@@ -1,6 +1,6 @@
 const {Octokit}=require("@octokit/core")
 const adminKey = process.env.ADMIN_GIT_KEY
-const org = "NRD-Lab-test"
+const org = process.env.GIT_ORG
 async function Is_User_Valid(orgName,userKey){
     // Is_User_Valid checks to see if a user is part of an organization
     // OrgName (string) is the organization being checked, and UserKey (string)

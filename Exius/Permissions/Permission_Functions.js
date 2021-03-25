@@ -1,7 +1,7 @@
 let {Get_Template_Key} =require("../Template_Key/Template_Key_Base")
 let {Get_Write_Key} = require("../Write_Key/Write_Key_Base")
 let {Does_User_Have_Repository_Access, Is_User_In_Org} = require("../Github/Github_Authorization")
-let getTemplateCredentials="pull"
+let getTemplateCredentials=process.env.TEMPLATE_CREDENTIALS_NEEDED
 
 
 async function Permission_To_Get_Write_Key(templateKey,writeKey,githubKey){
