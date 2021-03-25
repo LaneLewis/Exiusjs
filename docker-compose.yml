@@ -7,6 +7,9 @@ services:
       LETSENCRYPT_HOST: subdomain.domain
       LETSENCRYPT_EMAIL: example@email.com
       VIRTUAL_PORT: 3050
+      ADMIN_GIT_KEY: "12345example"
+      GIT_ORG: "exampleOrg"
+      TEMPLATE_CREDENTIALS_NEEDED: "pull"
     build: 
       context: "./Exius"
     expose:
