@@ -1,6 +1,6 @@
 FROM node:15-alpine
 WORKDIR /usr/src/app
-COPY package*.json ./
+COPY ./package*.json ./src
 RUN apk add --no-cache --virtual .gyp \
         python \
         make \
@@ -9,4 +9,4 @@ RUN apk add --no-cache --virtual .gyp \
     && apk del .gyp
 EXPOSE 3050
 COPY . ./
-CMD ["node","System_Operations.js"]
+CMD ["node","./src/System_Operations.js"]

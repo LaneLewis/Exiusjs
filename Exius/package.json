@@ -4,17 +4,19 @@
   "description": "",
   "main": "System_Operations.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "doc": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-gyp":"7.1.2",
     "@octokit/core": "^3.2.5",
-    "express":"4.17.1",
     "better-sqlite3": "7.1.2",
-    "box-node-sdk":"1.36.0",
-    "multer":"1.4.2",
-    "cors":"2.8.5"
+    "box-node-sdk": "1.36.0",
+    "clean-jsdoc-theme": "^3.2.8",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "jsdoc": "3.6.7",
+    "multer": "1.4.2",
+    "node-gyp": "7.1.2"
   }
 }
