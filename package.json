@@ -1,0 +1,15 @@
+{
+  "name": "document-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./Exius/src/System_Operations.js",
+  "scripts": {
+    "doc": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clean-jsdoc-theme": "^3.2.8",
+    "jsdoc": "3.6.7"
+  }
+}
