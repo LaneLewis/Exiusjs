@@ -1,5 +1,5 @@
 # Exius
-Exius is a niche dockerized web api that allows users to make controlled web endpoints for uploading data. It was specifically built to handle uploads from insecure locations such as static, public websites that need a lot of specificity in what a client should be able to upload. 
+Exius is a niche dockerized web api that allows users to make controlled web endpoints for uploading data. It was specifically built to handle uploads from insecure locations such as websites where the user may not be very trusted and a lot of specificity is needed in what a client should be able to upload.
 ## How it works
 * A github organization admin creates an instance of Exius on a web server and binds it to their organization with a github admin developer key. They also set who can create endpoints to box within their organization and the base folder in box that members can upload to.
 * Organization members with the specified credentials then can create Template Keys, which create a set of form data upload endpoints to a specific box folder and is tied to a repository. Within the template key, they can give highly specific limitations on what can be uploaded such as file types, number of files, max number of file updates, ect. In addition, they can protect it with a password and specify the number of Write Keys that the Template Key can create.
