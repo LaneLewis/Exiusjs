@@ -15,6 +15,6 @@ You will need several things to create your own Exius instance. A JWT json crede
 * An email to give to the JWILDER/LetsEncrypt proxy that will send updates if a certificate has issues. This should passed to the environment variable LETS_ENCRYPT_EMAIL.
 * A subdomain. This is where the api will be available over https. The subdomain should be passed to the environment variables LETS_ENCRYPT_HOST and VIRTUAL_HOST.
 # Documentation 
-coming soon!
+[https://lanelewis.github.io/Exius](https://lanelewis.github.io/Exius)
 # Use Case
 Exius's primary use case is to be the backend storage system for the in-development psychology experiment platform, PsychoSite.
