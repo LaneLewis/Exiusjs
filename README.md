@@ -9,7 +9,7 @@ Exius is a niche dockerized web api that allows users to make controlled web end
 ## Under the Hood
 Exius uses Docker Compose to containerize the application and make it easy to deploy on any server. The built Exius container is then paired with a JWILDER/NGINX-Letsencrypt proxy that allows the API to be accessed over HTTPS for free on a subdomain. Internally, it is written in Nodejs with Express. The Keys are maintained in an SQLite database with a table containing every Write Key for each Template Key created as well as a central table for the Template Keys. The Github api calls are made with the Octocat SDK and the Box api calls are done with the Box sdk.
 ## Setting Up Your Own Exius Instance
-You will need several things to create your own Exius instance. A JWT json credential file from Box, an admin key .
+You will need several things to create your own Exius instance.
 * JWT json credential file from Box. This allows you to connect to your own Box account. This will need to replace box_config.json at Exius/Box/box_config.json, and should be named box_config.json.
 * A Github organization with an Admin Developer Key. This will be used by Exius to check if a user has access to create and modify Template Keys. The name of the organization should replace the name of the environment variable ADMIN_GIT_KEY in the docker-compose file. The organization name should replace the environment variable GIT_ORG.
 * An email to give to the JWILDER/LetsEncrypt proxy that will send updates if a certificate has issues. This should passed to the environment variable LETS_ENCRYPT_EMAIL.
